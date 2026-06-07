@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="af">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="RSVP vir Nina en Tiaan se troue." />
+  <title>RSVP | Nina & Tiaan</title>
+  <link rel="stylesheet" href="rsvp.css?v=1" />
+</head>
+<body>
+  <main class="rsvp-page">
+    <section class="rsvp-card" aria-labelledby="rsvp-title">
+      <header class="rsvp-head">
+        <p class="rsvp-kicker">Trou RSVP</p>
+        <h1 id="rsvp-title">RSVP</h1>
+        <p class="rsvp-desc">
+          Bevestig asseblief julle bywoning voor 1 Junie 2026. Ons benodig hierdie inligting vir die tafeluitleg en ander reëlings.
+        </p>
+      </header>
+
+      <form id="rsvpForm" novalidate>
+        <div class="field" data-field="naam">
+          <label for="naam">Naam <span class="req">*</span></label>
+          <input id="naam" name="naam" type="text" autocomplete="given-name" />
+          <p class="error" data-error-for="naam"></p>
+        </div>
+
+        <div class="field" data-field="van">
+          <label for="van">Van <span class="req">*</span></label>
+          <input id="van" name="van" type="text" autocomplete="family-name" />
+          <p class="error" data-error-for="van"></p>
+        </div>
+
+        <div class="field" data-field="selNo">
+          <label for="selNo">Sel nommer <span class="req">*</span></label>
+          <input id="selNo" name="selNo" type="tel" autocomplete="tel" />
+          <p class="error" data-error-for="selNo"></p>
+        </div>
+
+        <div class="field" data-field="epos">
+          <label for="epos">E-pos</label>
+          <input id="epos" name="epos" type="email" autocomplete="email" />
+          <p class="error" data-error-for="epos"></p>
+        </div>
+
+        <fieldset class="field" data-field="kanJyKom">
+          <legend>Kan jy kom? <span class="req">*</span></legend>
+          <div class="option-row">
+            <label class="choice"><input type="radio" name="kanJyKom" value="Yes" /> Ja</label>
+            <label class="choice"><input type="radio" name="kanJyKom" value="No" /> Nee</label>
+          </div>
+          <p class="error" data-error-for="kanJyKom"></p>
+        </fieldset>
+
+        <section id="yesOnlyFields" class="conditional" hidden>
+          <fieldset class="field" data-field="datum">
+            <legend>Watter dag(e) sluit julle aan? <span class="req">*</span></legend>
+            <div class="option-row wrap">
+              <label class="choice"><input type="checkbox" name="datum" value="Friday" /> Vrydag</label>
+              <label class="choice"><input type="checkbox" name="datum" value="Saturday" /> Saterdag</label>
+              <label class="choice"><input type="checkbox" name="datum" value="Sunday" /> Sondag</label>
+            </div>
+            <p class="error" data-error-for="datum"></p>
+          </fieldset>
+
+          <fieldset class="field" data-field="guestCount">
+            <legend>Hoeveel gaste bring julle saam? (Bevestig asseblief met die bruidspaar of jy wel 'n "plus one" kan bring)<span class="req">*</span></legend>
+            <div class="option-row">
+              <label class="choice"><input type="radio" name="guestCount" value="1" /> 0</label>
+              <label class="choice"><input type="radio" name="guestCount" value="2" /> 1</label>
+            </div>
+            <p class="error" data-error-for="guestCount"></p>
+          </fieldset>
+
+          <section id="guestOnlyFields" class="conditional" hidden aria-label="Gas besonderhede">
+            <div class="field" data-field="guestName">
+              <label for="guestName">Naam (gas) <span class="req">*</span></label>
+              <input id="guestName" name="guestName" type="text" autocomplete="off" />
+              <p class="error" data-error-for="guestName"></p>
+            </div>
+
+            <div class="field" data-field="guestSurname">
+              <label for="guestSurname">Van (gas) <span class="req">*</span></label>
+              <input id="guestSurname" name="guestSurname" type="text" autocomplete="off" />
+              <p class="error" data-error-for="guestSurname"></p>
+            </div>
+
+            <div class="field" data-field="guestCell">
+              <label for="guestCell">Sel nommer (gas)</label>
+              <input id="guestCell" name="guestCell" type="tel" autocomplete="off" />
+              <p class="error" data-error-for="guestCell"></p>
+            </div>
+          </section>
+        </section>
+
+        <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+        <button type="submit" id="submitBtn" class="submit-btn">Stuur RSVP</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="rsvp.js?v=1" defer></script>
+</body>
+</html>

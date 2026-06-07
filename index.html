@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tiaan & Nina - 26 September 2026. Our story, accommodation, RSVP, palette, and details." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.delangetroue.co.za/" />
+  <meta property="og:title" content="Tiaan & Nina - 26 September 2026" />
+  <meta property="og:description" content="Tiaan & Nina - 26 September 2026. Our story, accommodation, RSVP, palette, and details." />
+  <meta property="og:image" content="https://www.delangetroue.co.za/images/Meta.webp?v=20260418" />
+  <meta property="og:image:secure_url" content="https://www.delangetroue.co.za/images/Meta.webp?v=20260418" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nina and Tiaan wedding hero image" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Tiaan & Nina - 26 September 2026" />
+  <meta property="twitter:description" content="Tiaan & Nina - 26 September 2026. Our story, accommodation, RSVP, palette, and details." />
+  <meta property="twitter:image" content="https://www.delangetroue.co.za/images/Meta.webp?v=20260418" />
+  <!-- Lock down external font/CSS loads (prevents any Google Fonts request) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; frame-src https://docs.google.com; upgrade-insecure-requests" />
+  <title>Nina & Tiaan — September Wedding</title>
+  <link rel="icon" type="image/webp" href="/images/fav.webp?v=20260418" />
+  <link rel="apple-touch-icon" href="/images/fav.webp?v=20260418" />
+
+  <!-- Fonts: preload local signature font -->
+  <link rel="preload" href="Fonts/pauline-signature.italic.otf" as="font" type="font/otf" crossorigin>
+
+  <link rel="stylesheet" href="styles.css?v=17" />
+</head>
+
+<body>
+  <!-- QUICK EDIT GUIDE:
+       - Section links use IDs (example: href="#rsvp" jumps to <section id="rsvp">).
+      - Header RSVP buttons open /rsvp.html in a new tab.
+      - RSVP section button also opens /rsvp.html.
+       - Visual hero darkness is controlled in styles.css under .hero__slide backgrounds and .hero__overlay.
+       - Mobile hero uses images/mobile-hero-1…4; desktop uses images/hero-1…6.
+  -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Fixed Navigation -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Go to top of the page">
+        <span class="brand__monogram" aria-hidden="true">✝</span>
+        <span class="brand__text">De Lange Troue</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
+        <span class="nav__toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <!-- Mobile-only top bar meta (keeps date + RSVP visible) -->
+      <div class="nav__meta nav__meta--bar" aria-label="Wedding date and RSVP">
+        <span class="nav__date">26 September 2026</span>
+        <a class="nav__cta" href="#rsvp">RSVP</a>
+      </div>
+
+      <div class="nav__menu" id="navMenu">
+        <div class="nav__menu-header">
+          <a class="brand nav__menu-brand" href="#top" aria-label="Go to top of the page">
+            <span class="brand__monogram" aria-hidden="true">✝</span>
+            <span class="brand__text">De Lange Troue</span>
+          </a>
+        </div>
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="#story">Ons Storie</a></li>
+          <li><a class="nav__link" href="#itinerary">Skedule</a></li>
+          <li><a class="nav__link" href="#palette">Kleur Skema</a></li>
+          <li><a class="nav__link" href="#accommodation">Akkommodasie</a></li>
+          <li><a class="nav__link" href="#gifts">Geskenke</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav__meta nav__meta--menu">
+        <!-- EDIT: date + location microcopy if desired -->
+        <span class="nav__date">26 September 2026</span>
+        <a class="nav__cta" href="#rsvp">RSVP</a>
+      </div>
+
+      <div class="nav__backdrop" data-nav-backdrop hidden></div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <!-- EDIT: Desktop hero images/hero-1…6; mobile images/mobile-hero-1…4 -->
+      <div class="hero__media" role="img" aria-label="Wedding hero photos" data-parallax="0.18">
+        <div class="hero__deck hero__deck--desktop" data-hero-deck="desktop">
+          <div class="hero__slide is-active" aria-hidden="false"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+        </div>
+        <div class="hero__deck hero__deck--mobile" data-hero-deck="mobile">
+          <div class="hero__slide is-active" aria-hidden="false"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+          <div class="hero__slide" aria-hidden="true"></div>
+        </div>
+      </div>
+      <!-- Extra dark layer over hero image; adjust opacity in styles.css (.hero__overlay). -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <h1 class="hero__title">
+          <span class="reveal-split" data-split>Tiaan & Nina</span>
+        </h1>
+      </div>
+
+      <div class="hero__datebar" aria-label="Wedding date">
+        <span class="hero__datepart">SATERDAG</span>
+        <svg class="hero__curl" width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1 6c8-5 16-5 24 0s16 5 24 0 16-5 20 0" stroke="rgba(255,255,255,0.78)" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <span class="hero__datepart">26 SEPTEMBER</span>
+        <svg class="hero__curl" width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1 6c8-5 16-5 24 0s16 5 24 0 16-5 20 0" stroke="rgba(255,255,255,0.78)" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <span class="hero__datepart">2026</span>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <!-- id="rsvp" is the in-page anchor target for header/hero RSVP buttons -->
+    <section class="section rsvp" id="rsvp" aria-label="RSVP">
+      <div class="rsvp__content reveal" data-reveal>
+        <p class="rsvp__kicker">Ons Virewig</p>
+        <p class="rsvp__headline">Liewe familie en vriende, dit is vir ons ’n groot voorreg om elkeen van julle formeel uit te nooi na ons troue. Julle teenwoordigheid sal hierdie naweek vir ons baie spesiaal maak.</p>
+        <p class="rsvp__date">RSVP Voor: 1 Junie 2026</p>
+        <a class="btn btn--outline btn--xl" href="rsvp.html" target="_blank" rel="noopener noreferrer">
+          RSVP Hier
+        </a>
+      </div>
+    </section>
+
+    <section class="rsvp-banner" aria-label="RSVP Banner">
+      <img class="rsvp-banner__img" src="images/banner-1.webp?v=20260516" alt="Wedding banner image" loading="lazy" decoding="async" />
+    </section>
+
+    <!-- Our Story -->
+    <section class="section story" id="story" aria-label="Our Story">
+      
+        <div class="story__split reveal" data-reveal>
+          <div class="story__split-right">
+            <h2 class="story__title">
+              <span class="story__title-script">Ons Storie</span>
+            </h2>
+            <div class="story__subheads" role="list" aria-label="Our love story highlights">
+              <div class="story__item">
+                <h3 class="story__subhead">Hoe Het Ons Ontmoet</h3>
+                <p class="story__desc">
+                  Net ná COVID in November 2020, toe die wêreld stadig weer begin asemhaal het, het ons paaie onverwags gekruis. Ek was nog besig met my finalejaar-eksamen toe my pa my binne een uur drie keer bel — elke keer met dieselfde boodskap: daar wag ’n baie “oulike meisie” by Toutrek Park, en ek moet kom. Ek was oortuig hulle wil eintlik net saam my 'n bier drink, maar ek het uiteindelik besluit om tog te ry en saam hulle 'n bier te geniet. Daar, om die hoek, het Nina gestaan. Stil, geduldig… en ongelooflik mooi. In daardie oomblik het iets eenvoudig begin wat baie meer sou word. Ek het saam na haar kar toe gestap en, vir die eerste keer in my lewe, genoeg moed bymekaar geskraap om vir haar nommer te vra. ’n Week of twee later het ons vir koffie ontmoet — en wat bedoel was as ’n kort afspraak, het ure se gesprek geword. Die res, soos hulle sê, is geskiedenis.
+                </p>
+              </div>
+              <div class="story__item">
+                <h3 class="story__subhead">Ons Gunsteling Plek</h3>
+                <p class="story__desc">
+                  Van die begin af het ek en Nina nog altyd 'n liefde vir die natuur gedeel. Ons is mal oor Dullstroom se berge, die diere en lewe van die Kruger Wildtuin en die see-lug en fynbos van Betty's Baai. Of dit nou berge, woude, die see of oop veld is — enige plek waar die natuur op sy mooiste is, is vir ons tuis.
+                </p>
+              </div>
+              <div class="story__item">
+                <h3 class="story__subhead">Die Verlowing</h3>
+                <p class="story__desc">
+                  Een van ons gunsteling plekke, Dullstroom, het die perfekte agtergrond geword vir die volgende hoofstuk. Op die rug van ’n perd (Nina se droom), tussen die rustige landskap en vars lug, het ek die vraag gevra. En wel... ons trou!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Itinerary -->
+    <section class="section itinerary" id="itinerary" aria-label="Itinerary">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Skedule</p>
+          <h2 class="h2">Naweek Program</h2>
+          <p class="lede">Genoeg van ons, die volgende is op elkeen van julle van toepassing:</p>
+          <p class="lede">Kom kuier saam en begin die naweek rustig Vrydag middag voor ons groot dag. Vir ons gaan dit om saam elkeen van julle tyd te spandeer en die dag te geniet. Ons verwelkom julle met ’n informele kuier en ’n geleentheid om almal weer te sien.</p>
+        </header>
+
+        <!-- Desktop: pinned, scroll-driven itinerary (one item visible at a time) -->
+        <div class="it-player" data-it-player aria-label="Itinerary timeline">
+          <div class="it-player__sticky">
+            <div class="it-player__frame">
+              <div class="it-player__day" data-it-day>Vrydag</div>
+
+              <div class="it-player__lane" aria-hidden="true">
+                <div class="it-player__hint it-player__hint--prev">
+                  <svg class="it-line" width="120" height="18" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M119 9H12" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
+                    <path d="M12 9l6-6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
+                    <path d="M12 9l6 6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
+                  </svg>
+                  <div class="it-player__peek" data-it-prev></div>
+                </div>
+
+                <div class="it-player__card" role="group" aria-label="Current itinerary item">
+                  <div class="it-player__time" data-it-time>14h00</div>
+                  <div class="it-player__text" data-it-text>Arriveer by Doringrant Trou Venue</div>
+                </div>
+
+                <div class="it-player__hint it-player__hint--next">
+                  <div class="it-player__peek" data-it-next></div>
+                  <svg class="it-line" width="120" height="18" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1 9h107" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
+                    <path d="M108 9l-6-6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
+                    <path d="M108 9l-6 6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="it-player__count" aria-hidden="true" data-it-count></div>
+            </div>
+          </div>
+
+          <!-- EDIT: update/add steps here -->
+          <div class="it-steps" hidden>
+            <div class="it-step" data-day="Friday" data-time="14h00" data-text="Arrival at the wedding"></div>
+            <div class="it-step" data-day="Friday" data-time="15h00 – 18h00" data-text="Fun and games (e.g. volleyball)"></div>
+            <div class="it-step" data-day="Friday" data-time="18h00 – 21h00" data-text="Braai and social"></div>
+
+            <div class="it-step" data-day="Saturday (The Wedding)" data-time="00h00" data-text="Placeholder text"></div>
+            <div class="it-step" data-day="Saturday (The Wedding)" data-time="00h00" data-text="Placeholder text"></div>
+            <div class="it-step" data-day="Saturday (The Wedding)" data-time="00h00" data-text="Placeholder text"></div>
+
+            <div class="it-step" data-day="Sunday" data-time="08h00" data-text="Wake-up with light breakfast"></div>
+            <div class="it-step" data-day="Sunday" data-time="10h00" data-text="Drive home"></div>
+          </div>
+        </div>
+
+        <!-- Mobile: stacked itinerary -->
+        <div class="itinerary__days">
+          <section class="it-day reveal" data-reveal data-itinerary>
+            <header class="it-day__head">
+              <h3 class="it-day__title">Vrydag</h3>
+              <p class="it-day__note">Wat om te bring: Swemklere, Handdoek, Eie vleis, drank en kampstoel. Bykosse sal voorsien word.</p>
+            </header>
+
+            <div class="it-day__wrap">
+              <div class="it-day__sticky">
+                <div class="it-track" aria-label="Friday timeline" data-itinerary-track>
+                  <div class="it-rail" data-itinerary-rail style="--slots:3;">
+                    <div class="it-stop">
+                      <div class="it-time">14h00</div>
+                      <div class="it-text">Arriveer by Doringrant Trou Venue</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">15h00 – 18h00</div>
+                      <div class="it-text">Geniet die dag saam (e.g. volleyball, swem, ens.)</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">18h00 – 21h00</div>
+                      <div class="it-text">Braai en kuier</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="it-day reveal" data-reveal data-itinerary data-stagger="1">
+            <header class="it-day__head">
+              <h3 class="it-day__title">Saterdag <span class="it-day__title-muted">(Die Troue)</span></h3>
+              <p class="it-day__note">Die groot dag. Kom en bevestig ons verbond met God. Finale reëlings vir die aand sal bevestig word.</p>
+            </header>
+
+            <div class="it-day__wrap">
+              <div class="it-day__sticky">
+                <div class="it-track" aria-label="Saturday timeline" data-itinerary-track>
+                  <div class="it-rail" data-itinerary-rail style="--slots:5;">
+                    <div class="it-stop">
+                      <div class="it-time">9h00 - 10h00</div>
+                      <div class="it-text">Kom geniet koffie en beskuit saam die familie</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">10h00 - 14h00</div>
+                      <div class="it-text">Ontspan en geniet die dag</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">14h00 - 14h45</div>
+                      <div class="it-text">Arriveer by die venue</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">15h00</div>
+                      <div class="it-text">Almal neem hul sitplekke in by die seremonie area</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">15h30 - 16h30</div>
+                      <div class="it-text">Diens en troue</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">16h30 - 23h30</div>
+                      <div class="it-text">Ligte etes terwyl fotos geneem word, Hoofmaaltyd en Kuier</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="it-day reveal" data-reveal data-itinerary data-stagger="2">
+            <header class="it-day__head">
+              <h3 class="it-day__title">Sondag</h3>
+              <p class="it-day__note">’n Rustige afsluiting van ’n onvergeetlike naweek.</p>
+            </header>
+
+            <div class="it-day__wrap">
+              <div class="it-day__sticky">
+                <div class="it-track" aria-label="Sunday timeline" data-itinerary-track>
+                  <div class="it-rail" data-itinerary-rail style="--slots:2;">
+                    <div class="it-stop">
+                      <div class="it-time">08h00</div>
+                      <div class="it-text">Kom groet en geniet ’n laaste koffie saam voordat almal vertrek</div>
+                    </div>
+                    <div class="it-stop">
+                      <div class="it-time">10h00</div>
+                      <div class="it-text">Naweek is afgesluit</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wedding Palette -->
+    <section class="section palette" id="palette" aria-label="Wedding Palette">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Ons Kleure</p>
+          <h2 class="h2">Kleur Palet vir Gaste</h2>
+          <p class="lede">
+            <!-- EDIT: palette note -->
+            Ons troue se styl is semi-formeel en geïnspireer deur warm, aardse kleure — natuurlik, sag en tydloos.
+          </p>
+        </header>
+
+        <div class="swatches" aria-label="Colour swatches">
+          <!-- EDIT: replace hex codes if needed -->
+          <div class="swatch reveal" data-reveal data-stagger="0">
+            <div class="swatch__dot" style="--sw:#DFD0C2" aria-hidden="true"></div>
+            <div class="swatch__hex">#DFD0C2</div>
+            <div class="swatch__name">SANDSTONE</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="1">
+            <div class="swatch__dot" style="--sw:#C8BBA7" aria-hidden="true"></div>
+            <div class="swatch__hex">#C8BBA7</div>
+            <div class="swatch__name">WARM LINEN</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="2">
+            <div class="swatch__dot" style="--sw:#D8C3A6" aria-hidden="true"></div>
+            <div class="swatch__hex">#D8C3A6</div>
+            <div class="swatch__name">CLAY BEIGE</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="3">
+            <div class="swatch__dot" style="--sw:#C7AF94" aria-hidden="true"></div>
+            <div class="swatch__hex">#C7AF94</div>
+            <div class="swatch__name">DESERT TAUPE</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="4">
+            <div class="swatch__dot" style="--sw:#EBCB92" aria-hidden="true"></div>
+            <div class="swatch__hex">#EBCB92</div>
+            <div class="swatch__name">GOLDEN OCHRE</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="5">
+            <div class="swatch__dot" style="--sw:#E1BD85" aria-hidden="true"></div>
+            <div class="swatch__hex">#E1BD85</div>
+            <div class="swatch__name">HONEY EARTH</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="6">
+            <div class="swatch__dot" style="--sw:#D4A185" aria-hidden="true"></div>
+            <div class="swatch__hex">#D4A185</div>
+            <div class="swatch__name">BURNT CLAY</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="7">
+            <div class="swatch__dot" style="--sw:#C07D58" aria-hidden="true"></div>
+            <div class="swatch__hex">#C07D58</div>
+            <div class="swatch__name">TERRACOTTA</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="8">
+            <div class="swatch__dot" style="--sw:#9CA677" aria-hidden="true"></div>
+            <div class="swatch__hex">#9CA677</div>
+            <div class="swatch__name">MUTED SAGE</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="9">
+            <div class="swatch__dot" style="--sw:#BBC4A4" aria-hidden="true"></div>
+            <div class="swatch__hex">#BBC4A4</div>
+            <div class="swatch__name">DUSTY OLIVE</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="10">
+            <div class="swatch__dot" style="--sw:#BDBFB5" aria-hidden="true"></div>
+            <div class="swatch__hex">#BDBFB5</div>
+            <div class="swatch__name">SOFT MOSS</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="11">
+            <div class="swatch__dot" style="--sw:#A8BAC4" aria-hidden="true"></div>
+            <div class="swatch__hex">#A8BAC4</div>
+            <div class="swatch__name">MINERAL BLUE</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="12">
+            <div class="swatch__dot" style="--sw:#B56B46" aria-hidden="true"></div>
+            <div class="swatch__hex">#B56B46</div>
+            <div class="swatch__name">RUST BROWN</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="13">
+            <div class="swatch__dot" style="--sw:#AB7743" aria-hidden="true"></div>
+            <div class="swatch__hex">#AB7743</div>
+            <div class="swatch__name">EARTH UMBER</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="14">
+            <div class="swatch__dot" style="--sw:#994D2C" aria-hidden="true"></div>
+            <div class="swatch__hex">#994D2C</div>
+            <div class="swatch__name">DEEP CLAY</div>
+          </div>
+
+          <div class="swatch reveal" data-reveal data-stagger="15">
+            <div class="swatch__dot" style="--sw:#E1AF65" aria-hidden="true"></div>
+            <div class="swatch__hex">#E1AF65</div>
+            <div class="swatch__name">AMBER SOIL</div>
+          </div>
+        </div>
+
+        <div class="palette__avoid">
+          <h3 class="h3 palette__avoid-title reveal" data-reveal>Wat om nie te dra nie:</h3>
+          <div class="swatches swatches--avoid" aria-label="Kleure om te vermy">
+            <div class="swatch swatch--avoid reveal" data-reveal data-stagger="0">
+              <div class="swatch__dot-wrap" aria-hidden="true">
+                <div class="swatch__dot" style="--sw:#FFFFFF"></div>
+              </div>
+              <div class="swatch__hex">#FFFFFF</div>
+              <div class="swatch__name">WHITE</div>
+            </div>
+            <div class="swatch swatch--avoid reveal" data-reveal data-stagger="1">
+              <div class="swatch__dot-wrap" aria-hidden="true">
+                <div class="swatch__dot" style="--sw:#1A1A1A"></div>
+              </div>
+              <div class="swatch__hex">#1A1A1A</div>
+              <div class="swatch__name">BLACK</div>
+            </div>
+            <div class="swatch swatch--avoid reveal" data-reveal data-stagger="2">
+              <div class="swatch__dot-wrap" aria-hidden="true">
+                <div class="swatch__dot swatch__dot--shocking" style="--sw: transparent"></div>
+              </div>
+              <div class="swatch__hex">NEON / FLUO</div>
+              <div class="swatch__name">SHOCKING COLORS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accommodation -->
+    <section class="section accommodation" id="accommodation" aria-label="Accommodation">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Verblyf</p>
+          <h2 class="h2">Akkommodasie</h2>
+          <p class="lede">
+            <!-- EDIT: short accommodation note -->
+            Verblyf is beskikbaar naby die venue vir die naweek. Ons beveel aan dat julle vroegtydig bespreek omrede dit skoolvakansie is.
+          </p>
+        </header>
+
+        <div class="cards">
+          <!-- EDIT: replace names, descriptions, travel notes, and href links -->
+          <article class="card reveal" data-reveal>
+            <div class="card__top">
+              <h3 class="h3">Hardekool Bosveld Wegbreek</h3>
+              <p class="card__meta">3 min weg</p>
+            </div>
+            <p class="body">
+              Ideaal vir die wat 'n bosveld wegbreek soek.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="https://share.google/OZYLaeiW94vfG8z3Q" target="_blank" rel="noopener">Sien Akkommodasie</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-reveal data-stagger="1">
+            <div class="card__top">
+              <h3 class="h3">Plaas Eendag</h3>
+              <p class="card__meta">8 min weg</p>
+            </div>
+            <p class="body">
+              'n Wildsplaas opsie met verskeie diere en vermaaklikhede.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="https://share.google/Q28XkoWrkAdbQrYwU" target="_blank" rel="noopener">Sien Akkommodasie</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-reveal data-stagger="2">
+            <div class="card__top">
+              <h3 class="h3">Sediba Kwele</h3>
+              <p class="card__meta">8 min weg</p>
+            </div>
+            <p class="body">
+              'n Alombekende vakansieoord vir diegene wat belangstel.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="https://share.google/Yd0lQwclPGvOoEmzw" target="_blank" rel="noopener">Sien Akkommodasie</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-reveal data-stagger="3">
+            <div class="card__top">
+              <h3 class="h3">Kokoriba</h3>
+              <p class="card__meta">20 min weg</p>
+            </div>
+            <p class="body">
+              Soos Sediba is dit ook 'n bekende vakansieoord.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="https://share.google/rPDn0L5j7sGCjx3k8" target="_blank" rel="noopener">Sien Akkommodasie</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-reveal data-stagger="3">
+            <div class="card__top">
+              <h3 class="h3">Kampeer</h3>
+              <p class="card__meta">Op die perseël</p>
+            </div>
+            <p class="body">
+              4 staanplekke is beskikbaar vir 6 mense per staanplek teen R275 per persoon per nag. Kontak die bruidegom rakende die reëlings.
+            </p>
+          </article>
+        </div>
+
+        <div class="cards__dots" data-accom-dots aria-label="Accommodation slides"></div>
+      </div>
+    </section>
+
+    <!-- Gifts -->
+    <section class="section gifts" id="gifts" aria-label="Gifts">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <h2 class="h2 h2--icon">
+            Geskenke
+            <svg class="h2__icon" width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 7H2v5h20V7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 22V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 7h-3.5c-1.4 0-2.5-1.1-2.5-2.5S7.1 2 8.5 2C11 2 12 7 12 7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 7h3.5c1.4 0 2.5-1.1 2.5-2.5S16.9 2 15.5 2C13 2 12 7 12 7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </h2>
+        </header>
+
+        <div class="gifts__panel reveal" data-reveal>
+          <p class="lede">
+            Julle teenwoordigheid op ons spesiale dag beteken vir ons opreg die meeste en is reeds die grootste geskenk wat ons kan ontvang. Ons sien uit daarna om hierdie oomblik saam met julle te vier en te deel.
+          </p>
+          <p class="body">
+            Vir dié wat wel graag iets ekstra wil gee, het ons ’n paar riglyne saamgestel om dit makliker te maak en dubbels te voorkom. Ons sal ook opreg enige kontantbydrae waardeer wat ons kan gebruik vir ons wittebrood en die huis wat ons saam wil begin bou, Geskenkbewyse is ook altyd ’n goeie en praktiese opsie.
+          </p>
+          <ul class="body" role="list">
+            <li>Kombuisware (Vlekvrye staal potte & panne, eetgerei, ens.)</li>
+            <li>Beddegoed, gordyne of handdoeke</li>
+            <li>Hout huisdekor of praktiese huisitems</li>
+            <li>Geskenkbewyse</li>
+          </ul>
+          <p class="body">
+            ’n Donasie aan die volgende rekening (T. de Lange, Capitec Spaar: 1495700702) sal ook opreg waardeer word, of kontak Annemieke de Lange by 0823722624 vir meer besonderhede.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- More Information / Contact Details -->
+    <section class="section info" id="info" aria-label="More Information">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Bykomende Inligting</p>
+          <h2 class="h2">Belangrike Besonderhede, Kontakte en Meer</h2>
+          <p class="lede">
+            <!-- EDIT: short info note -->
+            As daar enige ander vrae is buiten die bostaande inligting, stuur vir ons 'n WhatsApp.
+          </p>
+        </header>
+
+        <div class="info__grid">
+          <div class="info__panel reveal" data-reveal>
+            <h3 class="h3">Kontak Ons</h3>
+
+            <!-- EDIT: contact details -->
+            <ul class="info__list" role="list">
+              <li>
+                <span class="info__label">Bruid</span>
+                <span class="info__value">Nina — +27 79 521 5318</span>
+              </li>
+              <li>
+                <span class="info__label">Bruidegom</span>
+                <span class="info__value">Tiaan — +27 79 528 4037</span>
+              </li>
+              <li>
+                <span class="info__label">Epos</span>
+                <span class="info__value"><a href="mailto:you@example.com">delangetiaan13@gmail.com</a></span>
+              </li>
+            </ul>
+
+            <!-- EDIT: extra notes -->
+          
+          </div>
+
+          <div class="info__panel reveal" data-reveal data-stagger="1">
+            <h3 class="h3">Venue</h3>
+
+            <!-- EDIT: venue details -->
+            <ul class="info__list" role="list">
+              <li>
+                <span class="info__label">Venue Naam</span>
+                <span class="info__value">Doringrant Gasteplaas en Wedding Venue</span>
+              </li>
+              <li>
+                <span class="info__label">Adres</span>
+                <span class="info__value">Plaas Tweeriviere A12, Beestekraal, 0255</span>
+              </li>
+              <li>
+                <span class="info__label">Maps</span>
+                <span class="info__value"><a href="https://maps.app.goo.gl/2hQ4EG7sp3zQwtR76" target="_blank" rel="noopener">Sien Kaart</a></span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="info__wide-notes reveal" data-reveal>
+          <p class="body info__wide-note">Die venue is in ’n bosveld omgewing — gemaklike skoene word aanbeveel. Weerstoestande kan wel verander, bring asseblief ’n warm laag saam.Parkering sal beskikbaar wees op die perseel.</p>
+          <p class="body info__wide-note">Kroeg Inligting:
+            ’n Kontant- en kaartfasiliteit sal beskikbaar wees by die kroeg.
+            Kom geniet die aand saam.</p>
+          <p class="body info__wide-note">Die seremonie begin stiptelik 15h30 Saterdag Middag (26 September)</p>
+        </div>
+
+        <!-- Footer-like closing divider -->
+        <div class="divider reveal" data-reveal aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section faq-section" id="faqs" aria-label="Frequently asked questions">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <h2 class="h2">FAQs</h2>
+        </header>
+
+        <div class="faq reveal" data-reveal aria-label="Frequently asked questions">
+          <details class="faq__item">
+            <summary class="faq__question">Wat is die aankomstyd vir gaste?</summary>
+            <p class="faq__answer">Vrydag middag na 14h00. Gaste is welkom om vanaf 10h00 op Saterdag op die venue te arriveer en te help met die dekor. Ons gaan wel 9h00 Saterdag saam koffie drink.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Is daar parkering beskikbaar?</summary>
+            <p class="faq__answer">Ja, parkering sal op die perseel beskikbaar wees vir alle gaste.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Kan kinders die troue bywoon?</summary>
+            <p class="faq__answer">Kontak asseblief die bruidspaar direk indien julle oor kinders se bywoning wil navraag doen.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Wat is die aanbevole dragkode?</summary>
+            <p class="faq__answer">Semi-formeel in natuurlike, aardse kleure volgens die kleurpalet op die webblad.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Wat is die drank- of kroegreëlings?</summary>
+            <p class="faq__answer">Bring jou eie drank vir Vrydag aand, Saterdag aand sal daar 'n kontantkroeg wees, pryse hieronder (Geen eie drank word toegelaat nie):</p>
+            <p class="faq__answer faq__links">
+              <a href="PDFs/Drinks_Menu_T&amp;N.pdf" download>Pryslys</a>
+              <a href="PDFs/Specials_T&amp;N.pdf" download>Specials</a>
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__names">Nina & Tiaan</div>
+        <div class="footer__year">2026</div>
+      </div>
+      <div class="footer__line">
+        <!-- EDIT: closing line -->
+        <span>Met Liefde - Ons sien uit om elkeen van julle daar te sien!</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js?v=8" defer></script>
+</body>
+</html>
