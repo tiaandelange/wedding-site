@@ -3,7 +3,7 @@
   "private": true,
   "description": "Tiaan & Nina wedding website — static HTML/CSS/JS",
   "scripts": {
-    "build": "echo Static site — no build step required",
+    "build": "node scripts/build-public.mjs",
     "dev": "npx serve .",
     "preview": "npx serve ."
   },
