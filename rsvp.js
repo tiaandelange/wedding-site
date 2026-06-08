@@ -2,7 +2,7 @@
 (() => {
   "use strict";
 
-  // Paste your deployed Google Apps Script Web App URL here.
+  // Public Google Apps Script Web App URL (deployed with "Anyone" access).
   // Example: https://script.google.com/macros/s/AKfycb.../exec
   const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxjIBZd21ggaHNkXbhP8oVbuPvCh3bQgN-jT0aoshpLyl51NI0yl-X8t75FudkdJpLG/exec";
 
@@ -185,27 +185,16 @@
   }
 
   async function submitToGoogleScript(payload) {
-    // #region agent log
-    fetch('http://127.0.0.1:7853/ingest/c998b485-3be3-4e2b-b218-e07359599fb2',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'05737b'},body:JSON.stringify({sessionId:'05737b',runId:'initial',hypothesisId:'H1',location:'rsvp.js:submitToGoogleScript',message:'submitToGoogleScript called',data:{hasConfiguredUrl:!!WEB_APP_URL && !WEB_APP_URL.includes('PASTE_YOUR'),urlPreview:(WEB_APP_URL||'').slice(0,80)},timestamp:Date.now()})}).catch(()=>{});
-    // #endregion
     if (!WEB_APP_URL || WEB_APP_URL.includes("PASTE_YOUR")) {
-      // #region agent log
-      fetch('http://127.0.0.1:7853/ingest/c998b485-3be3-4e2b-b218-e07359599fb2',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'05737b'},body:JSON.stringify({sessionId:'05737b',runId:'initial',hypothesisId:'H1',location:'rsvp.js:submitToGoogleScript',message:'web app URL missing or placeholder',data:{urlIsPlaceholder:true},timestamp:Date.now()})}).catch(()=>{});
-      // #endregion
       throw new Error("Apps Script URL is nie opgestel nie.");
     }
 
-    // #region agent log
-    fetch('http://127.0.0.1:7853/ingest/c998b485-3be3-4e2b-b218-e07359599fb2',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'05737b'},body:JSON.stringify({sessionId:'05737b',runId:'initial',hypothesisId:'H2',location:'rsvp.js:submitToGoogleScript',message:'starting fetch to apps script',data:{method:'POST',payloadKeys:Object.keys(payload||{})},timestamp:Date.now()})}).catch(()=>{});
-    // #endregion
     const res = await fetch(WEB_APP_URL, {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
-    // #region agent log
-    fetch('http://127.0.0.1:7853/ingest/c998b485-3be3-4e2b-b218-e07359599fb2',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'05737b'},body:JSON.stringify({sessionId:'05737b',runId:'initial',hypothesisId:'H2',location:'rsvp.js:submitToGoogleScript',message:'fetch completed',data:{ok:res.ok,status:res.status,statusText:res.statusText},timestamp:Date.now()})}).catch(()=>{});
-    // #endregion
     if (!res.ok) {
       throw new Error("Netwerkfout tydens die stuur van RSVP.");
     }
@@ -217,9 +206,7 @@
     } catch (parseError) {
       throw new Error("Bediener het 'n ongeldige antwoord teruggestuur. Ontplooi asseblief weer die Apps Script.");
     }
-    // #region agent log
-    fetch('http://127.0.0.1:7853/ingest/c998b485-3be3-4e2b-b218-e07359599fb2',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'05737b'},body:JSON.stringify({sessionId:'05737b',runId:'initial',hypothesisId:'H3',location:'rsvp.js:submitToGoogleScript',message:'parsed response body',data:{success:data&&data.success===true,hasMessage:!!(data&&data.message)},timestamp:Date.now()})}).catch(()=>{});
-    // #endregion
+
     if (!data || data.success !== true) {
       throw new Error((data && data.message) || "Stuur het misluk.");
     }
@@ -248,18 +235,12 @@
 
     try {
       setSubmitting(true);
-      // #region agent log
-      fetch('http://127.0.0.1:7853/ingest/c998b485-3be3-4e2b-b218-e07359599fb2',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'05737b'},body:JSON.stringify({sessionId:'05737b',runId:'initial',hypothesisId:'H4',location:'rsvp.js:formSubmit',message:'form valid and submitting',data:{kanJyKom:payload.kanJyKom,hasGuestData:!!payload.guestName||!!payload.guestSurname},timestamp:Date.now()})}).catch(()=>{});
-      // #endregion
       await submitToGoogleScript(payload);
       setStatus("success", "Dankie! Jou RSVP is suksesvol gestuur.");
       form.reset();
       updateConditionalVisibility();
       clearErrors();
     } catch (err) {
-      // #region agent log
-      fetch('http://127.0.0.1:7853/ingest/c998b485-3be3-4e2b-b218-e07359599fb2',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'05737b'},body:JSON.stringify({sessionId:'05737b',runId:'initial',hypothesisId:'H5',location:'rsvp.js:formSubmit',message:'submit failed in catch',data:{errorMessage:err instanceof Error ? err.message : String(err)},timestamp:Date.now()})}).catch(()=>{});
-      // #endregion
       const errMessage = err instanceof Error ? err.message : "Stuur het misluk. Probeer asseblief weer.";
       if (errMessage === "Failed to fetch") {
         setStatus(

@@ -1,0 +1,12 @@
+{
+  "name": "wedding-site",
+  "private": true,
+  "description": "Tiaan & Nina wedding website — static HTML/CSS/JS",
+  "scripts": {
+    "dev": "npx serve .",
+    "preview": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "latest"
+  }
+}
