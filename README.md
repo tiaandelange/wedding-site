@@ -1,22 +1,23 @@
 # Nina & Tiaan — Wedding Website
 
-Static wedding website for **Tiaan & Nina** (26 September 2026). Plain HTML, CSS, and JavaScript — no build step required.
+Static wedding website for **Tiaan & Nina** (trounaweek 25–27 September 2026). Plain HTML, CSS, and JavaScript.
 
 ## Project structure
 
 ```
-├── index.html          # Homepage (single-page layout with anchor sections)
+├── index.html          # Homepage (weekend programme first)
 ├── main.js             # Navigation, hero slideshow, scroll interactions
 ├── styles.css          # Main site styles
-├── rsvp.html           # Standalone RSVP form page
-├── rsvp.js             # RSVP form logic (submits to Google Apps Script)
-├── rsvp.css            # RSVP page styles
-├── apps-script.gs      # Google Apps Script backend (deploy separately in Google)
+├── cancel.js           # Cancel RSVP modal (posts to Google Apps Script)
+├── rsvp.html           # Legacy /rsvp route → redirects to Cancel RSVP
+├── rsvp.js / rsvp.css  # Legacy RSVP assets (submissions closed)
+├── apps-script.gs      # Google Apps Script backend (deploy separately)
 ├── images/             # Photos, hero slides, favicon, social preview image
 ├── Fonts/              # Self-hosted fonts
 ├── PDFs/               # Downloadable drink menu documents
+├── scripts/            # Vercel public/ build copy step
 ├── vercel.json         # Vercel static deployment config
-└── package.json        # Optional local preview only
+└── package.json        # Local preview + build scripts
 ```
 
 ## Local preview
@@ -26,81 +27,48 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000` (or the port shown in the terminal).
+Open the URL shown in the terminal (often `http://localhost:3000`).
 
 ## Deploy to Vercel
 
-### 1. Push to GitHub
+1. Push to GitHub.
+2. Import in Vercel (Framework: Other).
+3. Build command: `npm run build` (copies static files into `public/`).
+4. Output directory: `public`.
+5. Attach `delangetroue.co.za` / `www.delangetroue.co.za`.
 
-Ensure the repository is pushed to GitHub (`tiaandelange/wedding-site`).
+## Cancel RSVP / Google Sheets
 
-### 2. Import in Vercel
+Cancellation is handled via a **Google Apps Script Web App**:
 
-1. Go to [vercel.com](https://vercel.com) and sign in.
-2. Click **Add New → Project**.
-3. Import the GitHub repository.
-4. Use these settings:
+- Frontend: `cancel.js` posts `{ action: "search" | "cancel", ... }` to the Web App URL.
+- Backend: paste `apps-script.gs` into Apps Script and **redeploy** as a Web App.
 
-| Setting | Value |
-|---------|-------|
-| **Framework Preset** | Other |
-| **Root Directory** | `.` (repository root) |
-| **Build Command** | *(leave empty)* |
-| **Output Directory** | *(leave empty / default)* |
-| **Install Command** | *(leave empty, or `npm install` if you want)* |
-
-5. Click **Deploy**.
-
-No build step is required. Vercel serves the static files directly from the repo root.
-
-### 3. Custom domain — delangetroue.co.za
-
-1. In the Vercel project, go to **Settings → Domains**.
-2. Add `delangetroue.co.za` and `www.delangetroue.co.za`.
-3. Update DNS at your domain registrar using the records Vercel provides (typically an `A` record and/or `CNAME` for `www`).
-4. Wait for DNS propagation (can take a few minutes to 48 hours).
-5. Vercel will provision HTTPS automatically.
-
-### 4. Post-deployment testing checklist
-
-After DNS is live, verify:
-
-- [ ] Homepage loads (`https://www.delangetroue.co.za/`)
-- [ ] Anchor navigation works (Ons Storie, Skedule, RSVP section, etc.)
-- [ ] Hero slideshow and images load
-- [ ] RSVP page opens at `/rsvp`
-- [ ] RSVP form submits successfully (test with a dummy entry)
-- [ ] Success and error messages display correctly
-- [ ] PDF links open (`Pryslys`, `Specials` in FAQs)
-- [ ] Google Maps link opens in a new tab
-- [ ] Accommodation links open in a new tab
-- [ ] Mobile layout looks correct
-- [ ] Desktop layout looks correct
-
-## RSVP / Google Sheets integration
-
-RSVP submissions are handled client-side via a **Google Apps Script Web App**:
-
-- Frontend: `rsvp.js` posts JSON to the deployed Apps Script URL.
-- Backend: `apps-script.gs` (copy into Google Apps Script, deploy as Web App).
-
-### Apps Script deployment (manual, one-time)
+### Apps Script deployment
 
 1. Open [Google Apps Script](https://script.google.com).
-2. Create a new project and paste the contents of `apps-script.gs`.
-3. Set the correct `SPREADSHEET_ID` and `SHEET_NAME`.
-4. Deploy → **New deployment** → type **Web app**.
-5. Set **Execute as**: Me.
-6. Set **Who has access**: **Anyone**.
-7. Copy the deployment URL and paste it into `WEB_APP_URL` in `rsvp.js`.
-8. Redeploy the Vercel site after updating `rsvp.js`.
+2. Paste `apps-script.gs`.
+3. Optional Script Properties: `SPREADSHEET_ID`, `SHEET_NAME`, `CANCEL_SECRET`.
+4. Deploy → New deployment → Web app.
+5. Execute as: Me · Who has access: Anyone.
+6. Copy the URL into `WEB_APP_URL` in `cancel.js` if it changes.
+7. Redeploy the Vercel site after updating `cancel.js`.
 
-The Web App URL is public by design (same pattern as most static-site RSVP forms). No API keys or service accounts are needed in the frontend.
+### Sheet mapping (resolved from headers)
 
-> **Note:** `apps-script.gs` contains a Google Sheet ID for reference when maintaining the Apps Script project. That file is not executed by Vercel — it stays in the repo as documentation for the backend setup.
+| Header | Role |
+|--------|------|
+| `Naam` / `Naam?` | Primary guest first name |
+| `Van` | Primary guest surname |
+| `Guest Name` | Additional guest first name |
+| `Kan jy kom?` | Attendance (`Yes` / `No`) — one value per row/party |
+| `Sel No.` | Phone verification |
+
+New RSVP submissions are rejected by the Apps Script. Cancellation only changes `Kan jy kom?` from `Yes` to `No`.
 
 ## Security notes
 
 - No private credentials are stored in the frontend.
-- The Google Apps Script Web App URL is intentionally public.
-- `apps-script.gs` includes a spreadsheet ID for backend maintenance only (not served to browsers).
+- Search returns only display names, masked phone hints, and opaque tokens.
+- Phone verification is required before writing `No`.
+- `apps-script.gs` is documentation for the backend; Vercel does not execute it.

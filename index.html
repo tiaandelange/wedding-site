@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="af">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Tiaan & Nina - 26 September 2026. Our story, accommodation, RSVP, palette, and details." />
+  <meta name="description" content="Tiaan & Nina — Ons trounaweek, 25–27 September 2026 by Doringrant. Volledige naweekprogram, venuebesonderhede en praktiese inligting." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.delangetroue.co.za/" />
-  <meta property="og:title" content="Tiaan & Nina - 26 September 2026" />
-  <meta property="og:description" content="Tiaan & Nina - 26 September 2026. Our story, accommodation, RSVP, palette, and details." />
+  <meta property="og:title" content="Tiaan & Nina — Ons Trounaweek 2026" />
+  <meta property="og:description" content="Volledige naweekprogram vir 25–27 September 2026 by Doringrant Gasteplaas, Beestekraal — tye, venue en praktiese inligting." />
   <meta property="og:image" content="https://www.delangetroue.co.za/images/Meta.webp?v=20260418" />
   <meta property="og:image:secure_url" content="https://www.delangetroue.co.za/images/Meta.webp?v=20260418" />
   <meta property="og:image:type" content="image/webp" />
@@ -15,26 +15,25 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Nina and Tiaan wedding hero image" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Tiaan & Nina - 26 September 2026" />
-  <meta property="twitter:description" content="Tiaan & Nina - 26 September 2026. Our story, accommodation, RSVP, palette, and details." />
+  <meta property="twitter:title" content="Tiaan & Nina — Ons Trounaweek 2026" />
+  <meta property="twitter:description" content="Volledige naweekprogram vir 25–27 September 2026 by Doringrant Gasteplaas, Beestekraal — tye, venue en praktiese inligting." />
   <meta property="twitter:image" content="https://www.delangetroue.co.za/images/Meta.webp?v=20260418" />
   <!-- Lock down external font/CSS loads (prevents any Google Fonts request) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; frame-src https://docs.google.com; upgrade-insecure-requests" />
-  <title>Nina & Tiaan — September Wedding</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-src https://docs.google.com; upgrade-insecure-requests" />
+  <title>Tiaan & Nina — Ons Trounaweek | 25–27 September 2026</title>
   <link rel="icon" type="image/webp" href="/images/fav.webp?v=20260418" />
   <link rel="apple-touch-icon" href="/images/fav.webp?v=20260418" />
 
   <!-- Fonts: preload local signature font -->
   <link rel="preload" href="Fonts/pauline-signature.italic.otf" as="font" type="font/otf" crossorigin>
 
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=22" />
 </head>
 
 <body>
   <!-- QUICK EDIT GUIDE:
-       - Section links use IDs (example: href="#rsvp" jumps to <section id="rsvp">).
-      - Header RSVP buttons open /rsvp in a new tab.
-      - RSVP section button also opens /rsvp.
+       - Section links use IDs (example: href="#itinerary" jumps to the naweekprogram).
+       - Header / hero “Kanselleer RSVP” opens the cancellation modal.
        - Visual hero darkness is controlled in styles.css under .hero__slide backgrounds and .hero__overlay.
        - Mobile hero uses images/mobile-hero-1…4; desktop uses images/hero-1…6.
   -->
@@ -52,10 +51,10 @@
         <span class="nav__toggle-lines" aria-hidden="true"></span>
       </button>
 
-      <!-- Mobile-only top bar meta (keeps date + RSVP visible) -->
-      <div class="nav__meta nav__meta--bar" aria-label="Wedding date and RSVP">
+      <!-- Mobile-only top bar meta (keeps date + Kanselleer RSVP visible) -->
+      <div class="nav__meta nav__meta--bar" aria-label="Wedding date and Kanselleer RSVP">
         <span class="nav__date">26 September 2026</span>
-        <a class="nav__cta" href="#rsvp">RSVP</a>
+        <button class="nav__cta" type="button" data-open-cancel-rsvp>Kanselleer RSVP</button>
       </div>
 
       <div class="nav__menu" id="navMenu">
@@ -66,8 +65,9 @@
           </a>
         </div>
         <ul class="nav__links" role="list">
-          <li><a class="nav__link" href="#story">Ons Storie</a></li>
+          <li><a class="nav__link" href="#overview">Naweek</a></li>
           <li><a class="nav__link" href="#itinerary">Skedule</a></li>
+          <li><a class="nav__link" href="#story">Ons Storie</a></li>
           <li><a class="nav__link" href="#palette">Kleur Skema</a></li>
           <li><a class="nav__link" href="#accommodation">Akkommodasie</a></li>
           <li><a class="nav__link" href="#gifts">Geskenke</a></li>
@@ -77,7 +77,7 @@
       <div class="nav__meta nav__meta--menu">
         <!-- EDIT: date + location microcopy if desired -->
         <span class="nav__date">26 September 2026</span>
-        <a class="nav__cta" href="#rsvp">RSVP</a>
+        <button class="nav__cta" type="button" data-open-cancel-rsvp>Kanselleer RSVP</button>
       </div>
 
       <div class="nav__backdrop" data-nav-backdrop hidden></div>
@@ -108,9 +108,17 @@
       <div class="hero__overlay" aria-hidden="true"></div>
 
       <div class="hero__content container">
+        <p class="hero__kicker reveal-on-load" style="--d:80ms">Ons Trounaweek</p>
         <h1 class="hero__title">
           <span class="reveal-split" data-split>Tiaan & Nina</span>
         </h1>
+        <p class="hero__subtitle reveal-on-load" style="--d:180ms">
+          25–27 September 2026 · Doringrant, Beestekraal — die volledige naweekprogram en praktiese inligting.
+        </p>
+        <div class="hero__actions reveal-on-load" style="--d:260ms">
+          <a class="btn btn--primary btn--xl" href="#itinerary">Bekyk die naweekprogram</a>
+          <button class="btn btn--ghost btn--xl" type="button" data-open-cancel-rsvp>Kanselleer RSVP</button>
+        </div>
       </div>
 
       <div class="hero__datebar" aria-label="Wedding date">
@@ -126,20 +134,242 @@
       </div>
     </section>
 
-    <!-- RSVP -->
-    <!-- id="rsvp" is the in-page anchor target for header/hero RSVP buttons -->
-    <section class="section rsvp" id="rsvp" aria-label="RSVP">
-      <div class="rsvp__content reveal" data-reveal>
-        <p class="rsvp__kicker">Ons Virewig</p>
-        <p class="rsvp__headline">Liewe familie en vriende, dit is vir ons ’n groot voorreg om elkeen van julle formeel uit te nooi na ons troue. Julle teenwoordigheid sal hierdie naweek vir ons baie spesiaal maak.</p>
-        <p class="rsvp__date">RSVP Voor: 1 Junie 2026</p>
-        <a class="btn btn--outline btn--xl" href="/rsvp" target="_blank" rel="noopener noreferrer">
-          RSVP Hier
-        </a>
+    <!-- Weekend overview -->
+    <section class="section overview" id="overview" aria-label="Naweek oorsig">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Met ’n oogopslag</p>
+          <h2 class="h2">Die Trounaweek</h2>
+          <p class="lede">Liewe familie en vriende — julle teenwoordigheid maak hierdie naweek spesiaal. Hier is waar julle moet wees en wanneer.</p>
+        </header>
+
+        <div class="overview__grid" role="list">
+          <article class="overview__item reveal" data-reveal role="listitem">
+            <p class="overview__day">Vrydag 25 September</p>
+            <p class="overview__activity">Aankoms &amp; informele kuier</p>
+            <p class="overview__time">Vanaf 14h00</p>
+            <p class="overview__place">Doringrant Trou Venue</p>
+            <p class="overview__note">Bring swemklere, handdoek, eie vleis, drank en ’n kampstoel. Bykosse word voorsien.</p>
+          </article>
+
+          <article class="overview__item reveal" data-reveal data-stagger="1" role="listitem">
+            <p class="overview__day">Saterdag 26 September</p>
+            <p class="overview__activity">Die Troue</p>
+            <p class="overview__time">Arriveer 14h00–14h45 · Seremonie 15h30 · Ontvangs 18h00</p>
+            <p class="overview__place">Doringrant Gasteplaas en Wedding Venue</p>
+            <p class="overview__note">Semi-formeel in aardse kleure. Die seremonie begin stiptelik.</p>
+          </article>
+
+          <article class="overview__item reveal" data-reveal data-stagger="2" role="listitem">
+            <p class="overview__day">Sondag 27 September</p>
+            <p class="overview__activity">Afsluiting &amp; vertrek</p>
+            <p class="overview__time">08h00 koffie · 10h00 afgesluit</p>
+            <p class="overview__place">Doringrant</p>
+            <p class="overview__note">’n Rustige laaste koffie voordat almal vertrek.</p>
+          </article>
+        </div>
+
+        <p class="overview__links reveal" data-reveal>
+          <a class="btn btn--secondary" href="#itinerary">Volledige skedule</a>
+          <a class="btn btn--secondary" href="https://maps.app.goo.gl/2hQ4EG7sp3zQwtR76" target="_blank" rel="noopener noreferrer">Sien Kaart</a>
+          <a class="btn btn--secondary" href="#info">Venue &amp; dokumente</a>
+        </p>
       </div>
     </section>
 
-    <section class="rsvp-banner" aria-label="RSVP Banner">
+    <!-- Itinerary -->
+    <section class="section itinerary" id="itinerary" aria-label="Itinerary">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Skedule</p>
+          <h2 class="h2">Naweek Program</h2>
+          <p class="lede">Kom kuier saam en begin die naweek rustig Vrydag middag voor ons groot dag. Vir ons gaan dit om saam elkeen van julle tyd te spandeer en die dag te geniet.</p>
+        </header>
+
+        <div class="itinerary__days">
+          <section class="it-day reveal" data-reveal>
+            <header class="it-day__head">
+              <h3 class="it-day__title">Vrydag <span class="it-day__title-muted">25 September</span></h3>
+              <p class="it-day__note">Plek: Doringrant Trou Venue. Wat om te bring: Swemklere, Handdoek, Eie vleis, drank en kampstoel. Bykosse sal voorsien word.</p>
+            </header>
+
+            <div class="it-day__body">
+              <section class="it-phase">
+                <ol class="it-line">
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-25T14:00">14h00</time>
+                    <p class="it-text">Arriveer by Doringrant Trou Venue</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-25T15:00">15h00 – 18h00</time>
+                    <p class="it-text">Geniet die dag saam (e.g. volleyball, swem, ens.)</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-25T18:00">18h00 – 21h00</time>
+                    <p class="it-text">Braai en kuier</p>
+                  </li>
+                </ol>
+              </section>
+            </div>
+          </section>
+
+          <section class="it-day reveal" data-reveal data-stagger="1">
+            <header class="it-day__head">
+              <h3 class="it-day__title">Saterdag <span class="it-day__title-muted">26 September · Die Troue</span></h3>
+              <p class="it-day__note">Plek: Doringrant Gasteplaas en Wedding Venue. Drag: semi-formeel in natuurlike, aardse kleure. Die seremonie begin stiptelik 15h30. Canapés en die kroeg vanaf 16h45 terwyl fotos geneem word. Die ontvangs begin 18h00.</p>
+            </header>
+
+            <div class="it-day__body">
+              <section class="it-phase">
+                <h4 class="it-phase__title">Oggend &amp; middag</h4>
+                <ol class="it-line">
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T09:00">09h00 – 10h00</time>
+                    <p class="it-text">Koffie en beskuit saam die familie</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T10:00">10h00 – 13h00</time>
+                    <p class="it-text">Ontspan, gesels en help met die laaste dekor</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T14:00">14h00 – 14h45</time>
+                    <p class="it-text">Gaste arriveer, welkomsdrankie en teken die gasteboek</p>
+                  </li>
+                </ol>
+              </section>
+
+              <section class="it-phase">
+                <h4 class="it-phase__title">Die seremonie</h4>
+                <ol class="it-line">
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T14:45">14h45 – 15h00</time>
+                    <p class="it-text">Beweeg na die seremonie-area</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T15:00">15h00</time>
+                    <p class="it-text">Almal neem hul sitplekke in</p>
+                  </li>
+                  <li class="it-item" data-key="true">
+                    <time class="it-time" datetime="2026-09-26T15:30">15h30 – 16h00</time>
+                    <p class="it-text">Diens en Seremonie — begin stiptelik</p>
+                  </li>
+                </ol>
+              </section>
+
+              <section class="it-phase">
+                <h4 class="it-phase__title">Canapés &amp; fotos</h4>
+                <ol class="it-line">
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T16:15">16h15 – 16h30</time>
+                    <p class="it-text">Gelukwensinge en konfetti-uitstap</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T16:30">16h30 – 18h00</time>
+                    <p class="it-text">Canapés en die kroeg maak oop</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T16:45">16h45 – 17h15</time>
+                    <p class="it-text">Familie- en groepfotos — ons roep julle wanneer dit julle beurt is</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T17:15">17h15 – 18h00</time>
+                    <p class="it-text">Fotos met die bruidspaar, strooijonkers en strooimeisies</p>
+                  </li>
+                </ol>
+              </section>
+
+              <section class="it-phase">
+                <h4 class="it-phase__title">Die ontvangs</h4>
+                <ol class="it-line">
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T17:50">17h50</time>
+                    <p class="it-text">Gaste beweeg in en neem sitplekke</p>
+                  </li>
+                  <li class="it-item" data-key="true">
+                    <time class="it-time" datetime="2026-09-26T18:00">18h00</time>
+                    <p class="it-text">Die bruidspaar</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T18:05">18h05</time>
+                    <p class="it-text">Welkom en tafelgebed</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T18:15">18h15 – 18h45</time>
+                    <p class="it-text">Toesprake</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T18:45">18h45 – 19h15</time>
+                    <p class="it-text">Speletjies</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T19:15">19h15 – 20h15</time>
+                    <p class="it-text">Hoofmaaltyd word bedien</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T20:15">20h15 – 20h50</time>
+                    <p class="it-text">Sny van die koek en nagereg</p>
+                  </li>
+                </ol>
+              </section>
+
+              <section class="it-phase">
+                <h4 class="it-phase__title">Dans &amp; kuier</h4>
+                <ol class="it-line">
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T20:50">20h50 – 21h00</time>
+                    <p class="it-text">Eerste dans, gevolg deur die vader-dogter en moeder-seun dans</p>
+                  </li>
+                  <li class="it-item" data-key="true">
+                    <time class="it-time" datetime="2026-09-26T21:00">21h00</time>
+                    <p class="it-text">Die dansvloer maak oop</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T23:15">23h15</time>
+                    <p class="it-text">Laaste liedjie</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-26T23:30">23h30</time>
+                    <p class="it-text">Kuier sonder DJ</p>
+                  </li>
+                </ol>
+              </section>
+            </div>
+          </section>
+
+          <section class="it-day reveal" data-reveal data-stagger="2">
+            <header class="it-day__head">
+              <h3 class="it-day__title">Sondag <span class="it-day__title-muted">27 September</span></h3>
+              <p class="it-day__note">’n Rustige afsluiting van ’n onvergeetlike naweek by Doringrant.</p>
+            </header>
+
+            <div class="it-day__body">
+              <section class="it-phase">
+                <ol class="it-line">
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-27T08:00">08h00</time>
+                    <p class="it-text">Kom groet en geniet ’n laaste koffie saam voordat almal vertrek</p>
+                  </li>
+                  <li class="it-item">
+                    <time class="it-time" datetime="2026-09-27T10:00">10h00</time>
+                    <p class="it-text">Naweek is afgesluit</p>
+                  </li>
+                </ol>
+              </section>
+            </div>
+          </section>
+        </div>
+
+        <p class="itinerary__practical reveal" data-reveal>
+          <a href="https://maps.app.goo.gl/2hQ4EG7sp3zQwtR76" target="_blank" rel="noopener noreferrer">Google Maps — Doringrant</a>
+          ·
+          <a href="PDFs/Drinks_Menu_T&amp;N.pdf" download>Pryslys</a>
+          ·
+          <a href="PDFs/Specials_T&amp;N.pdf" download>Specials</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="rsvp-banner" aria-label="Wedding banner">
       <img class="rsvp-banner__img" src="images/banner-1.webp?v=20260516" alt="Wedding banner image" loading="lazy" decoding="async" />
     </section>
 
@@ -173,163 +403,6 @@
             </div>
           </div>
         </div>
-    </section>
-
-    <!-- Itinerary -->
-    <section class="section itinerary" id="itinerary" aria-label="Itinerary">
-      <div class="container">
-        <header class="section__head reveal" data-reveal>
-          <p class="eyebrow">Skedule</p>
-          <h2 class="h2">Naweek Program</h2>
-          <p class="lede">Genoeg van ons, die volgende is op elkeen van julle van toepassing:</p>
-          <p class="lede">Kom kuier saam en begin die naweek rustig Vrydag middag voor ons groot dag. Vir ons gaan dit om saam elkeen van julle tyd te spandeer en die dag te geniet. Ons verwelkom julle met ’n informele kuier en ’n geleentheid om almal weer te sien.</p>
-        </header>
-
-        <!-- Desktop: pinned, scroll-driven itinerary (one item visible at a time) -->
-        <div class="it-player" data-it-player aria-label="Itinerary timeline">
-          <div class="it-player__sticky">
-            <div class="it-player__frame">
-              <div class="it-player__day" data-it-day>Vrydag</div>
-
-              <div class="it-player__lane" aria-hidden="true">
-                <div class="it-player__hint it-player__hint--prev">
-                  <svg class="it-line" width="120" height="18" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M119 9H12" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-                    <path d="M12 9l6-6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-                    <path d="M12 9l6 6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-                  </svg>
-                  <div class="it-player__peek" data-it-prev></div>
-                </div>
-
-                <div class="it-player__card" role="group" aria-label="Current itinerary item">
-                  <div class="it-player__time" data-it-time>14h00</div>
-                  <div class="it-player__text" data-it-text>Arriveer by Doringrant Trou Venue</div>
-                </div>
-
-                <div class="it-player__hint it-player__hint--next">
-                  <div class="it-player__peek" data-it-next></div>
-                  <svg class="it-line" width="120" height="18" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M1 9h107" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-                    <path d="M108 9l-6-6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-                    <path d="M108 9l-6 6" stroke="rgba(42,38,35,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              <div class="it-player__count" aria-hidden="true" data-it-count></div>
-            </div>
-          </div>
-
-          <!-- EDIT: update/add steps here -->
-          <div class="it-steps" hidden>
-            <div class="it-step" data-day="Friday" data-time="14h00" data-text="Arrival at the wedding"></div>
-            <div class="it-step" data-day="Friday" data-time="15h00 – 18h00" data-text="Fun and games (e.g. volleyball)"></div>
-            <div class="it-step" data-day="Friday" data-time="18h00 – 21h00" data-text="Braai and social"></div>
-
-            <div class="it-step" data-day="Saturday (The Wedding)" data-time="00h00" data-text="Placeholder text"></div>
-            <div class="it-step" data-day="Saturday (The Wedding)" data-time="00h00" data-text="Placeholder text"></div>
-            <div class="it-step" data-day="Saturday (The Wedding)" data-time="00h00" data-text="Placeholder text"></div>
-
-            <div class="it-step" data-day="Sunday" data-time="08h00" data-text="Wake-up with light breakfast"></div>
-            <div class="it-step" data-day="Sunday" data-time="10h00" data-text="Drive home"></div>
-          </div>
-        </div>
-
-        <!-- Mobile: stacked itinerary -->
-        <div class="itinerary__days">
-          <section class="it-day reveal" data-reveal data-itinerary>
-            <header class="it-day__head">
-              <h3 class="it-day__title">Vrydag</h3>
-              <p class="it-day__note">Wat om te bring: Swemklere, Handdoek, Eie vleis, drank en kampstoel. Bykosse sal voorsien word.</p>
-            </header>
-
-            <div class="it-day__wrap">
-              <div class="it-day__sticky">
-                <div class="it-track" aria-label="Friday timeline" data-itinerary-track>
-                  <div class="it-rail" data-itinerary-rail style="--slots:3;">
-                    <div class="it-stop">
-                      <div class="it-time">14h00</div>
-                      <div class="it-text">Arriveer by Doringrant Trou Venue</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">15h00 – 18h00</div>
-                      <div class="it-text">Geniet die dag saam (e.g. volleyball, swem, ens.)</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">18h00 – 21h00</div>
-                      <div class="it-text">Braai en kuier</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="it-day reveal" data-reveal data-itinerary data-stagger="1">
-            <header class="it-day__head">
-              <h3 class="it-day__title">Saterdag <span class="it-day__title-muted">(Die Troue)</span></h3>
-              <p class="it-day__note">Die groot dag. Kom en bevestig ons verbond met God. Finale reëlings vir die aand sal bevestig word.</p>
-            </header>
-
-            <div class="it-day__wrap">
-              <div class="it-day__sticky">
-                <div class="it-track" aria-label="Saturday timeline" data-itinerary-track>
-                  <div class="it-rail" data-itinerary-rail style="--slots:5;">
-                    <div class="it-stop">
-                      <div class="it-time">9h00 - 10h00</div>
-                      <div class="it-text">Kom geniet koffie en beskuit saam die familie</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">10h00 - 14h00</div>
-                      <div class="it-text">Ontspan en geniet die dag</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">14h00 - 14h45</div>
-                      <div class="it-text">Arriveer by die venue</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">15h00</div>
-                      <div class="it-text">Almal neem hul sitplekke in by die seremonie area</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">15h30 - 16h30</div>
-                      <div class="it-text">Diens en troue</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">16h30 - 23h30</div>
-                      <div class="it-text">Ligte etes terwyl fotos geneem word, Hoofmaaltyd en Kuier</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="it-day reveal" data-reveal data-itinerary data-stagger="2">
-            <header class="it-day__head">
-              <h3 class="it-day__title">Sondag</h3>
-              <p class="it-day__note">’n Rustige afsluiting van ’n onvergeetlike naweek.</p>
-            </header>
-
-            <div class="it-day__wrap">
-              <div class="it-day__sticky">
-                <div class="it-track" aria-label="Sunday timeline" data-itinerary-track>
-                  <div class="it-rail" data-itinerary-rail style="--slots:2;">
-                    <div class="it-stop">
-                      <div class="it-time">08h00</div>
-                      <div class="it-text">Kom groet en geniet ’n laaste koffie saam voordat almal vertrek</div>
-                    </div>
-                    <div class="it-stop">
-                      <div class="it-time">10h00</div>
-                      <div class="it-text">Naweek is afgesluit</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
     </section>
 
     <!-- Wedding Palette -->
@@ -660,6 +733,18 @@
       </div>
     </section>
 
+    <!-- Kanselleer RSVP utility (secondary) -->
+    <section class="section cancel-util" id="cancel-rsvp" aria-label="Kanselleer RSVP">
+      <div class="container">
+        <div class="cancel-util__panel reveal" data-reveal>
+          <p class="eyebrow">RSVP</p>
+          <h2 class="h2">Kanselleer RSVP</h2>
+          <p class="lede">Kan jy nie meer die troue bywoon nie? Soek jou naam hieronder om jou bestaande RSVP te kanselleer. Kanselleer voor einde Augustus.</p>
+          <button class="btn btn--outline btn--xl" type="button" data-open-cancel-rsvp>Kanselleer RSVP</button>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQs -->
     <section class="section faq-section" id="faqs" aria-label="Frequently asked questions">
       <div class="container">
@@ -689,6 +774,11 @@
           </details>
 
           <details class="faq__item">
+            <summary class="faq__question">Wanneer eet ons?</summary>
+            <p class="faq__answer">Canapés word vanaf 16h45 bedien terwyl die fotos geneem word, en die hoofmaaltyd word 19h15 bedien. Die kroeg is oop vanaf 16h45.</p>
+          </details>
+
+          <details class="faq__item">
             <summary class="faq__question">Wat is die drank- of kroegreëlings?</summary>
             <p class="faq__answer">Bring jou eie drank vir Vrydag aand, Saterdag aand sal daar 'n kontantkroeg wees, pryse hieronder (Geen eie drank word toegelaat nie):</p>
             <p class="faq__answer faq__links">
@@ -696,10 +786,84 @@
               <a href="PDFs/Specials_T&amp;N.pdf" download>Specials</a>
             </p>
           </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Hoe kanselleer ek my RSVP?</summary>
+            <p class="faq__answer">Gebruik die “Kanselleer RSVP”-knoppie, soek jou naam, en bevestig. Dit verander jou bestaande bywoning na Nee. Kanselleer voor einde Augustus.</p>
+          </details>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Kanselleer RSVP modal -->
+  <div class="cancel-modal" id="cancelRsvpDialog" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cancelRsvpTitle">
+    <div class="cancel-modal__backdrop" data-close-cancel-rsvp tabindex="-1"></div>
+    <div class="cancel-modal__panel" role="document">
+      <div class="cancel-modal__ornament" aria-hidden="true"></div>
+      <button class="cancel-modal__close" type="button" data-close-cancel-rsvp aria-label="Sluit">×</button>
+      <header class="cancel-modal__head">
+        <p class="cancel-modal__kicker">Bestaande RSVP</p>
+        <h2 id="cancelRsvpTitle">Kanselleer RSVP</h2>
+        <p class="cancel-modal__deadline">Kanselleer voor einde Augustus</p>
+        <p class="cancel-modal__desc">Kan jy nie meer die troue bywoon nie? Soek jou naam hieronder om jou bestaande RSVP te kanselleer.</p>
+      </header>
+
+      <form id="cancelRsvpForm" novalidate>
+        <div id="cancelStepSearch">
+          <div class="cancel-field cancel-field--suggest">
+            <label for="cancelName">Naam</label>
+            <input
+              id="cancelName"
+              name="cancelName"
+              type="text"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="cancelMatches"
+              placeholder="Begin tik jou naam…"
+              required
+              minlength="1"
+            />
+            <div
+              id="cancelMatches"
+              class="cancel-matches"
+              role="listbox"
+              aria-label="RSVP naamvoorstelle"
+              hidden
+            ></div>
+          </div>
+          <p class="cancel-hint">Name kom uit die bestaande RSVP-lys. Kies jou naam in die lys hieronder.</p>
+          <button type="submit" id="cancelSearchBtn" class="cancel-btn cancel-btn--solid">Soek</button>
+        </div>
+
+        <div id="cancelStepConfirm" hidden>
+          <div class="cancel-selected" aria-live="polite">
+            <p class="cancel-selected__label">Jy kanselleer die RSVP vir</p>
+            <p id="cancelSelectedName" class="cancel-selected__name"></p>
+            <p id="cancelConfirmSummary" class="cancel-selected__note">Dit kanselleer die hele RSVP / geselskap op die lys.</p>
+          </div>
+          <p class="cancel-step-copy cancel-step-copy--center"><strong>Is jy seker jy wil hierdie RSVP kanselleer?</strong></p>
+          <div class="cancel-actions">
+            <button type="button" id="cancelKeepBtn" class="cancel-btn cancel-btn--ghost">Behou RSVP</button>
+            <button type="button" id="cancelConfirmBtn" class="cancel-btn cancel-btn--danger">Kanselleer RSVP</button>
+          </div>
+        </div>
+
+        <div id="cancelStepResult" hidden>
+          <div class="cancel-result">
+            <p id="cancelResultMessage" class="cancel-result__message" role="status"></p>
+          </div>
+          <button type="button" class="cancel-btn cancel-btn--ghost" data-close-cancel-rsvp>Sluit</button>
+        </div>
+
+        <p id="cancelStatus" class="cancel-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer" aria-label="Footer">
@@ -715,6 +879,7 @@
     </div>
   </footer>
 
-  <script src="main.js?v=8" defer></script>
+  <script src="main.js?v=9" defer></script>
+  <script src="cancel.js?v=4" defer></script>
 </body>
 </html>

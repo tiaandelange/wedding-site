@@ -241,7 +241,7 @@
 
   // ---------- Active section link ----------
   // Keep this in sync with anchor links you want highlighted in the nav.
-  const sectionIds = ["#story", "#itinerary", "#palette", "#accommodation", "#gifts", "#rsvp"];
+  const sectionIds = ["#overview", "#itinerary", "#story", "#palette", "#accommodation", "#gifts", "#cancel-rsvp"];
   const sections = sectionIds.map(id => $(id)).filter(Boolean);
 
   let activeId = null;
@@ -363,4 +363,12 @@
   initActiveSection();
   initHoverEnhancements();
   initAccommodationCarousel();
+
+  // Open Cancel RSVP when arriving via /rsvp redirect or deep link.
+  if (window.location.hash === "#cancel-rsvp") {
+    window.setTimeout(() => {
+      const trigger = document.querySelector("[data-open-cancel-rsvp]");
+      if (trigger) trigger.click();
+    }, 350);
+  }
 })();

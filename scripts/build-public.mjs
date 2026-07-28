@@ -8,6 +8,7 @@ const files = [
   "index.html",
   "main.js",
   "styles.css",
+  "cancel.js",
   "rsvp.html",
   "rsvp.js",
   "rsvp.css",
